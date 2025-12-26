@@ -1,0 +1,323 @@
+/* ================= RESET GLOBAL ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+/* ================= SPLASH ================= */
+.splash-bg {
+  position: fixed;
+  inset: 0;
+  background: #2752A0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* SAFE AREA MOBILE */
+  padding:
+    env(safe-area-inset-top)
+    env(safe-area-inset-right)
+    env(safe-area-inset-bottom)
+    env(safe-area-inset-left);
+
+  pointer-events: none;   /* ⬅️ BIAR KLIK TEMBUS */
+  z-index: 1;
+}
+.logo-img {
+  width: 200px;
+  animation: fadeZoom 2s ease-in-out;
+}
+
+/* ================= HOME ================= */
+.home {
+  min-height: 100vh;
+  background: #ffffff; /* PUTIH FULL */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 200px;
+}
+
+.home-logo {
+  width: 200px;
+  margin-bottom: -30px;
+}
+
+/* ================= BUTTON UMUM ================= */
+.btn {
+  width: 80%;
+  max-width: 300px;
+  padding: 14px;
+  margin-bottom: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.primary {
+  background-color: #2752A0;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ================= ANIMASI ================= */
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ================= KASIR ================= */
+.kasir-bg {
+  min-height: 100vh;
+  background: #f2f2f2;
+  padding: 16px;
+}
+
+/* HEADER KASIR */
+.kasir-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: -60px 0 -30px;
+}
+
+.kasir-logo {
+  width: 200px;
+  margin-top: -80px;
+  margin-bottom: -80px;
+}
+
+/* ================= CARD ================= */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ================= FORM ================= */
+select, input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+/* ================= ITEM LIST ================= */
+.item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.price {
+  margin-left: auto;
+  margin-right: 10px;
+}
+
+.item button {
+  background: #2752A0;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+/* ================= CART ================= */
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.cart-name {
+  flex: 1;              /* dorong harga & tombol ke kanan */
+  font-size: 15px;
+}
+
+.cart-price {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty {
+  min-width: 16px;
+  text-align: center;
+}
+
+
+.qty-btn {
+  background: #2752A0;
+  color: white;
+  border: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+}
+/* ================= KERANJANG BARU ================= */
+.cart-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.cart-name {
+  flex: 1;
+  font-size: 15px;
+}
+
+.cart-price {
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.cart-qty {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.qty {
+  min-width: 20px;
+  text-align: center;
+}
+
+/* ================= TOTAL & ACTION ================= */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.btn-primary {
+  flex: 1;
+  padding: 12px;
+  background: #2752A0;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+
+.total {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* ================= LOGOUT ================= */
+.logout {
+  width: 100%;
+  padding: 14px;
+  background: #d1605a;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  margin-top: 10px;
+}
+/* ================= LOGIN ADMIN ================= */
+.admin-bg {
+  min-height: 100vh;
+  background: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px; /* dari 120px */
+}
+.admin-logo {
+  width: 180px;
+  margin-bottom: 24px;
+  display: block;
+}
+
+.admin-card {
+  width: 90%;
+  max-width: 360px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.admin-title {
+  text-align: center;
+  color: #aaa;
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.admin-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+/* BUTTON */
+.btn-secondary {
+  width: 100%;
+  padding: 12px;
+  background: #666;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.btn-primary {
+    width: 100%;
+  padding: 12px;
+  background:#2F4EA2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+/* ================= FIX KLIK TIDAK BISA ================= */
+.home,
+.admin-bg,
+.kasir-bg {
+  position: relative;
+  z-index: 2;
+}
+/* SELECT KATEGORI (ADMIN & KASIR) */
+select {
+  background-color: #e8f0ff;   /* warna fill */
+  color: #000;                 /* warna teks */
+  border: 1px solid #2752A0;
+  border-radius: 8px;
+}
+
+/* Saat diklik / fokus */
+select:focus {
+  outline: none;
+  background-color: #dbe7ff;
+  border-color: #2752A0;
+}

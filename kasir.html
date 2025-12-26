@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Kasir - SajianTepi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="kasir-bg">
+
+  <!-- HEADER -->
+  <div class="kasir-header">
+    <img src="logo2.png" class="home-logo" alt="SajianTepi">
+  </div>
+
+  <!-- FILTER & SEARCH -->
+  <div class="card">
+    <select id="category" onchange="renderProducts()">
+      <option value="ALL">ALL</option>
+      <option value="MINUMAN">MINUMAN</option>
+      <option value="MAKANAN">MAKANAN</option>
+    </select>
+
+    <input
+      type="text"
+      id="search"
+      placeholder="Cari Barang"
+      onkeyup="renderProducts()"
+    >
+  </div>
+
+  <!-- DAFTAR BARANG -->
+  <div class="card">
+    <h3>DAFTAR BARANG</h3>
+    <div id="productList"></div>
+  </div>
+
+  <!-- KERANJANG -->
+  <div class="card">
+    <h3>KERANJANG</h3>
+    <div id="cart"></div>
+  </div>
+
+  <!-- TOTAL & BAYAR -->
+  <div class="card">
+    <p class="total">Total: <b id="totalHarga">Rp0</b></p>
+
+    <input
+      type="text"
+      id="bayar"
+      placeholder="Bayar"
+      oninput="formatInputBayar()"
+    >
+
+    <div class="row">
+      <button type="button" class="btn-primary" onclick="bayar()">Bayar</button>
+      <button class="btn-primary" onclick="window.print()">Cetak Struk</button>
+    </div>
+
+    <p style="margin-top:10px;">
+      Kembalian: <b id="kembalian">Rp0</b>
+    </p>
+  </div>
+
+  <!-- LOGOUT -->
+  <button class="logout" onclick="location.href='index.html'">Logout</button>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>

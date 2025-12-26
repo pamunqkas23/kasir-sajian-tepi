@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="kasir-bg">
+
+<h3 style="text-align:center">ADMIN PANEL</h3>
+
+<!-- TAMBAH BARANG -->
+<div class="card">
+  <h4>TAMBAH KATEGORI & BARANG</h4>
+
+  <select id="category">
+    <option value="MINUMAN">Minuman</option>
+    <option value="MAKANAN">Makanan</option>
+  </select>
+
+  <input id="name" placeholder="Nama Barang">
+  <input id="price" type="number" placeholder="Harga">
+
+  <button class="btn-primary" onclick="addProduct()">TAMBAH</button>
+</div>
+
+<!-- HAPUS BARANG -->
+<div class="card">
+  <h4>HAPUS BARANG</h4>
+  <select id="deleteProduct"></select>
+  <button class="btn-primary" onclick="deleteProduct()">HAPUS</button>
+</div>
+
+<!-- RIWAYAT TRANSAKSI -->
+<div class="card">
+  <h4>RIWAYAT TRANSAKSI</h4>
+  <div
+
+  <div id="history"></div>
+  <button class="btn-primary" onclick="clearHistory()">HAPUS SEMUA</button>
+</div>
+
+<button class="logout" onclick="logout()">Logout</button>
+
+<script src="admin.js"></script>
+</body>
+</html>

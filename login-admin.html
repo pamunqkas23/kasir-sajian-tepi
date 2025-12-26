@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Admin - SajianTepi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-bg">
+  <h1 class="admin-logo"></h1>
+  <img src="logo2.png" class="admin-logo" alt="SajianTepi">
+
+  <div class="admin-card">
+    <p class="admin-title">LOGIN ADMIN</p>
+
+    <input
+      type="password"
+      id="pin"
+      placeholder="Masukkan PIN Admin"
+    >
+
+    <button class="btn-primary" onclick="loginAdmin()">MASUK</button>
+    <button class="btn-secondary" onclick="batal()">BATAL</button>
+  </div>
+
+<script>
+const ADMIN_PIN = "20012310"; // 🔐 GANTI PIN DI SINI
+
+function loginAdmin() {
+  const pin = document.getElementById("pin").value;
+
+  if (pin === ADMIN_PIN) {
+    localStorage.setItem("adminLogin", "true");
+    location.href = "admin.html";
+  } else {
+    alert("PIN SALAH");
+  }
+}
+
+function batal() {
+  location.href = "index.html"; // ⬅️ KEMBALI KE HOME / SPLASH
+}
+</script>
+
+</body>
+</html>
